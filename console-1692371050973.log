@@ -1,0 +1,23 @@
+var candidateName = 'Ram';
+var profile = 'SE';
+var offerLetter = `Dear ${candidateName}, 
+Your Job is Confirmed for ${profile}`;
+undefined
+offerLetter;
+'Dear Ram, \nYour Job is Confirmed for SE'
+console.log(offerLetter);
+VM237:1 Dear Ram, 
+Your Job is Confirmed for SE
+undefined
+candidateName = 'Shyam';
+'Shyam'
+profile = 'DevOps';
+'DevOps'
+
+var offerLetter = `Dear ${candidateName}, 
+Your Job is Confirmed for ${profile}`;
+undefined
+console.log(offerLetter);
+VM421:1 Dear Shyam, 
+Your Job is Confirmed for DevOps
+undefined
