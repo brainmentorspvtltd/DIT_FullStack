@@ -1,0 +1,42 @@
+var dhoni = {id:7, name:'MS Dhoni'};
+undefined
+dhoni.id;
+7
+dhoni.name;
+'MS Dhoni'
+dhoni[id];
+VM141:1 Uncaught ReferenceError: id is not defined
+    at <anonymous>:1:7
+(anonymous) @ VM141:1
+dhoni['id'];
+7
+dhoni['name'];
+'MS Dhoni'
+var dhoni = {id:7, name:'MS Dhoni', 100:10};
+undefined
+dhoni.100;
+VM204:1 Uncaught SyntaxError: Unexpected number
+dhoni[100];
+10
+dhoni.50 = 51;
+VM265:1 Uncaught SyntaxError: Unexpected number
+dhoni[50] = 51;
+51
+dhoni;
+{50: 51, 100: 10, id: 7, name: 'MS Dhoni'}
+dhoni.full address = "New Delhi";
+VM375:1 Uncaught SyntaxError: Unexpected identifier 'address'
+dhoni.['full address'] = "New Delhi";
+VM383:1 Uncaught SyntaxError: Unexpected token '['
+dhoni['full address'] = "New Delhi";
+'New Delhi'
+dhoni;
+{50: 51, 100: 10, id: 7, name: 'MS Dhoni', full address: 'New Delhi'}
+dhoni['full address'];
+'New Delhi'
+var r = 'id';
+undefined
+dhoni.r;
+undefined
+dhoni[r];
+7
