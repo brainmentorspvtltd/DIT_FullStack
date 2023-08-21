@@ -1,0 +1,58 @@
+var obj = {x:10, y:20}; // Object Literal
+undefined
+typeof obj;
+'object'
+obj instanceof Object;
+true
+typeof Object;
+'function'
+obj.z = 100;
+100
+obj;
+{x: 10, y: 20, z: 100}
+delete obj.z;
+true
+obj.x = 90;
+90
+obj;
+{x: 90, y: 20}
+var e = new Object();
+undefined
+e;
+{}
+var g = {};
+undefined
+g;
+{}
+typeof e;
+'object'
+typeof g;
+'object'
+var f = Object.create(null);
+undefined
+f;
+{}
+typeof f;
+'object'
+obj;
+{x: 90, y: 20}
+e;
+{}
+g;
+{}
+e==g;
+false
+e===g;
+false
+obj;
+{x: 90, y: 20}
+var obj2 = obj;
+undefined
+obj2 ===obj;
+true
+var obj3 = {...obj};
+undefined
+obj3;
+{x: 90, y: 20}
+obj3 === obj;
+false
