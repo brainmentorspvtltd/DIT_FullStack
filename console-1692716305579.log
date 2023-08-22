@@ -1,0 +1,69 @@
+// Function and It Types
+undefined
+function show(x,y){
+    return x + y;
+}
+var z = show(10,20);
+console.log(z);
+VM222:5 30
+undefined
+function test(){
+    return 10,20;
+}
+undefined
+test();
+20
+function disp(){
+    return [10,20,30];
+
+}
+var m = disp();
+undefined
+m;
+(3) [10, 20, 30]
+function output(){
+    return {x:10, y:20, z:30};
+}
+undefined
+var g = output();
+undefined
+g;
+{x: 10, y: 20, z: 30}
+function add(){
+    return function adder(){
+        console.log("I am the Adder ");
+    }
+}
+undefined
+add();
+ƒ adder(){
+        console.log("I am the Adder ");
+    }
+add()();
+VM636:3 I am the Adder 
+undefined
+var f = add();
+undefined
+typeof f;
+'function'
+f;
+ƒ adder(){
+        console.log("I am the Adder ");
+    }
+f();
+VM636:3 I am the Adder 
+undefined
+function disp(){
+    return [10,20,30];
+
+}
+
+undefined
+disp()[0];
+10
+function output(){
+    return {x:10, y:20, z:30};
+}
+undefined
+output()['x'];
+10

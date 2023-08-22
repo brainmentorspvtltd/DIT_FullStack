@@ -1,0 +1,34 @@
+show(); // Call
+function show(){ // Define
+    console.log(" I am the Show ");
+}
+VM108:3  I am the Show 
+undefined
+window.show;
+ƒ show(){ // Define
+    console.log(" I am the Show ");
+}
+window.show();
+VM108:3  I am the Show 
+undefined
+show(); // window.show();
+VM108:3  I am the Show 
+undefined
+var z = function(){
+    console.log("I am the Anonymous Function ");
+}
+undefined
+typeof z;
+'function'
+z();
+VM312:2 I am the Anonymous Function 
+undefined
+m(); 
+var m = function(){
+    console.log("I am the Function Expression");
+}
+VM442:1 Uncaught TypeError: m is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM442:1
+m;
+undefined

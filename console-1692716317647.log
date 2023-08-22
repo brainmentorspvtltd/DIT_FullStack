@@ -1,0 +1,10 @@
+test();
+function test(){
+    console.log("Named Fn ");
+}
+r();
+var r = test;
+VM136:3 Named Fn 
+VM136:5 Uncaught TypeError: r is not a function
+    at <anonymous>:5:1
+(anonymous) @ VM136:5

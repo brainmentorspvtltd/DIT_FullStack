@@ -1,0 +1,17 @@
+function show(){
+    console.log(arguments.length);
+}
+undefined
+show(10,20);
+VM143:2 2
+undefined
+var add = (x,y)=>{
+    console.log(arguments);
+}
+undefined
+add(10,20);
+VM309:2 Uncaught ReferenceError: arguments is not defined
+    at add (<anonymous>:2:17)
+    at <anonymous>:1:1
+add @ VM309:2
+(anonymous) @ VM361:1
