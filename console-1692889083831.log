@@ -1,0 +1,55 @@
+// deletion ways in array
+undefined
+var arr = [10,20,1,2,90,33, 88];
+undefined
+arr.pop();
+88
+arr;
+(6) [10, 20, 1, 2, 90, 33]
+arr.shift();
+10
+arr.splice(1, 1);
+[1]
+arr;
+(4) [20, 2, 90, 33]
+arr.length=0;
+0
+arr;
+[]
+var arr = [10,20,1,2,90,33, 88];
+undefined
+arr.length = 4;
+4
+arr;
+(4) [10, 20, 1, 2]
+var arr = [10,20,1,2,90,33, 88];
+undefined
+arr = arr.filter(e=>e<30);
+(4) [10, 20, 1, 2]
+arr;
+(4) [10, 20, 1, 2]
+var arr = [10,20,1,2,90,33, 88];
+undefined
+arr = arr.reduce((temp, e)=>{
+    if(e<30){
+        temp.push(e);
+    }
+    return temp;
+}, []);
+(4) [10, 20, 1, 2]
+arr;
+(4) [10, 20, 1, 2]
+arr;
+(4) [10, 20, 1, 2]
+arr[0] = 10000;
+10000
+arr;
+(4) [10000, 20, 1, 2]
+// for loop, for each , for of , for in
+undefined
+arr;
+(4) [10000, 20, 1, 2]
+Array.of(10,20,30);
+(3) [10, 20, 30]
+Array.from(arr);
+(4) [10000, 20, 1, 2]
