@@ -1,0 +1,131 @@
+function show(){
+    // var e ; // Hoisting
+    console.log("E is ", e); // undefined
+    if(10>2){
+        var e = 10; // e = 10;
+    }
+    console.log(e);
+}
+undefined
+show();
+VM203:3 E is  undefined
+VM203:7 10
+undefined
+function show(){
+     console.log("E is ", e); // undefined
+   var e = 20;
+    console.log("E is ", e); // 20
+    if(10>2){
+        var e = 10; // e = 10;
+         console.log("E is ", e); // 10
+    }
+    var e  = 30;
+    console.log(e); //30;
+}
+undefined
+show();
+VM272:2 E is  undefined
+VM272:4 E is  20
+VM272:7 E is  10
+VM272:10 30
+undefined
+function show(){
+     console.log("E is ", e); // Error
+   
+    if(10>2){
+        let e = 10; // e = 10;
+         console.log("E is ", e); // 10
+    }
+    
+    console.log(e); //Error;
+}
+undefined
+show();
+VM325:2 Uncaught ReferenceError: e is not defined
+    at show (<anonymous>:2:27)
+    at <anonymous>:1:1
+show @ VM325:2
+(anonymous) @ VM346:1
+function show(){
+     //console.log("E is ", e); // Error
+   
+    if(10>2){
+        console.log("E is ", e); // Error
+        let e = 10; // e = 10;
+         console.log("E is ", e); // 10
+    }
+    
+    console.log(e); //Error;
+}
+undefined
+show();
+VM356:5 Uncaught ReferenceError: Cannot access 'e' before initialization
+    at show (<anonymous>:5:30)
+    at <anonymous>:1:1
+show @ VM356:5
+(anonymous) @ VM378:1
+function show(){
+    
+       let e = 20;
+    console.log('E is ', e);
+    if(10>2){
+        //console.log("E is ", e); // Error
+        let e = 10; // e = 10;
+         console.log("E is ", e); // 10
+    }
+    
+    console.log(e); //Error;
+}
+undefined
+show();
+VM434:4 E is  20
+VM434:8 E is  10
+VM434:11 20
+undefined
+function show(){
+    
+       let e = 20;
+    console.log('E is ', e);
+    if(10>2){
+        //console.log("E is ", e); // Error
+        let e = 10; // e = 10;
+         console.log("E is ", e); // 10
+    }
+    let e = 100;
+    console.log(e); //Error;
+}
+VM469:10 Uncaught SyntaxError: Identifier 'e' has already been declared
+let rr = 100;
+undefined
+window.rr;
+undefined
+const MAX  = 100;
+undefined
+MAX++;
+VM586:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM586:1
+MAX = 200;
+VM607:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM607:1
+const obj = {id:1001, name:'Ram'};
+undefined
+obj.id++;
+1001
+obj;
+{id: 1002, name: 'Ram'}
+obj = {};
+VM734:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM734:1
+const arr = [10,20,30];
+undefined
+arr[0] = 1111;
+1111
+arr;
+(3) [1111, 20, 30]
+arr = [100,200,300];
+VM911:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM911:1

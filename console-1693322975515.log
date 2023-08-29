@@ -1,0 +1,128 @@
+// IIFE 
+undefined
+(function(){
+    console.log("IIFE ");
+})();
+VM98:2 IIFE 
+undefined
+function init(){
+var count = 0; // Local Variable
+function counter(){
+   // var count = 0; // Local Variable
+    count++;
+    return count;
+    
+}
+    return counter;
+}
+undefined
+var t = init();
+undefined
+t();
+1
+t();
+2
+t();
+3
+t();
+4
+t();
+5
+t = init();
+ƒ counter(){
+   // var count = 0; // Local Variable
+    count++;
+    return count;
+    
+}
+t();
+1
+t();
+2
+t();
+3
+var g  = (function (){
+var count = 0; // Local Variable
+function counter(){
+   // var count = 0; // Local Variable
+    count++;
+    return count;
+    
+}
+    return counter;
+})();
+undefined
+g;
+ƒ counter(){
+   // var count = 0; // Local Variable
+    count++;
+    return count;
+    
+}
+g();
+1
+g();
+2
+g();
+3
+g();
+4
+g();
+5
+g();
+6
+function scope(){
+    console.log(" i is ", i); // undefined
+    for(var i = 1; i<=5; i++){
+        console.log("I is ", i);
+    }
+    console.log("I is ", i);
+}
+undefined
+scope();
+VM511:2  i is  undefined
+VM511:4 I is  1
+VM511:4 I is  2
+VM511:4 I is  3
+VM511:4 I is  4
+VM511:4 I is  5
+VM511:6 I is  6
+undefined
+function scope(){
+    console.log(" i is ", i); // Error
+    for(let i = 1; i<=5; i++){
+        console.log("I is ", i);
+    }
+    console.log("I is ", i);
+}
+undefined
+function scope(){
+    console.log(" i is ", i); // Error
+    for(let i = 1; i<=5; i++){
+        console.log("I is ", i);
+    }
+    console.log("I is ", i); // Error
+}
+undefined
+scope();
+VM566:2 Uncaught ReferenceError: i is not defined
+    at scope (<anonymous>:2:27)
+    at <anonymous>:1:1
+scope @ VM566:2
+(anonymous) @ VM589:1
+function scope(){
+    console.log(" i is ", i); // Error
+    (function(){
+    for(var i = 1; i<=5; i++){
+        console.log("I is ", i);
+    }
+    })();
+    console.log("I is ", i); // Error
+}
+undefined
+scope();
+VM615:2 Uncaught ReferenceError: i is not defined
+    at scope (<anonymous>:2:27)
+    at <anonymous>:1:1
+scope @ VM615:2
+(anonymous) @ VM647:1

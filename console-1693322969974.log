@@ -1,0 +1,21 @@
+function show(y){
+    var z = 100;
+    var m = 200;
+    return function(x){
+        var a = 10;
+        return a + x + y; 
+    }
+}
+undefined
+show(100);
+ƒ (x){
+        var a = 10;
+        return a + x + y; 
+    }
+var g = show(100);
+undefined
+g(1);
+111
+console.dir(g);
+VM243:1 ƒ anonymous(x)arguments: nullcaller: nulllength: 1name: ""prototype: {constructor: ƒ}[[FunctionLocation]]: VM141:4[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (show) {y: 100}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
