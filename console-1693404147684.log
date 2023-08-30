@@ -1,0 +1,13 @@
+function cube(num){
+    for(let i = 1; i<=100000; i++){
+        for(let j = 1; j<=10000; j++){
+            
+        }
+    }
+    return num**3;
+}
+undefined
+cube(3);
+
+27
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}

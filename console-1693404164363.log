@@ -1,0 +1,10 @@
+function mixVeg(oil){
+    return function(veggies){
+        return function(toppings){
+            return "Final Rec "+oil +" "+veggies +" "+toppings;
+        }
+    }
+}
+undefined
+mixVeg('Coc Oil ')('Mix Vegs')('Greens Chille');
+'Final Rec Coc Oil  Mix Vegs Greens Chille'

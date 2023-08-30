@@ -1,0 +1,77 @@
+// OOJS
+undefined
+var arr = [];
+undefined
+typeof arr;
+'object'
+arr instanceof Array;
+true
+typeof Array;
+'function'
+var obj = {};
+undefined
+typeof obj;
+'object'
+obj instanceof Object;
+true
+typeof Object;
+'function'
+arr instanceof Array;
+true
+arr instanceof Object;
+true
+var amit = {id:1001, name:'Amit', address:'Delhi'};
+undefined
+typeof amit;
+'object'
+var sohan = {id:1002, name:'Sohan'};
+undefined
+function createPerson(id, name, city){
+    var person = {};
+    person.id = id;
+    person.name = name
+    person.city = city;
+    return person;
+        
+}
+undefined
+var amit = createPerson(1000, 'Amit', 'Mumbai');
+undefined
+amit;
+{id: 1000, name: 'Amit', city: 'Mumbai'}
+var tim = createPerson(100, 'Tim', 'Delhi');
+undefined
+tim;
+{id: 100, name: 'Tim', city: 'Delhi'}
+typeof amit;
+'object'
+typeof tim;
+'object'
+amit instanceof createPerson;
+false
+amit instanceof Object;
+true
+tim instanceof Object;
+true
+// function constructor
+function Person(id , name, city){
+    //this - keyword (Current Calling Object Reference)
+    this.id = id;
+    this.name = name;
+    this.city = city;
+    
+}
+var tom = new Person(1001, 'Tom', 'Mumbai');
+undefined
+amit;
+{id: 1000, name: 'Amit', city: 'Mumbai'}city: "Mumbai"id: 1000name: "Amit"[[Prototype]]: Object
+tom;
+Person {id: 1001, name: 'Tom', city: 'Mumbai'}city: "Mumbai"id: 1001name: "Tom"[[Prototype]]: Object
+amit instanceof createPerson;
+false
+amit instanceof Object;
+true
+tom instanceof Person;
+true
+tom instanceof Object;
+true

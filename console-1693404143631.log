@@ -1,0 +1,32 @@
+var cache = {};
+function cube(num){
+    if(cache[num]){
+        return cache[num];
+    }
+    for(let i = 1; i<=10000; i++){
+        for(let j = 1; j<=10000; j++){
+            
+        }
+    }
+    cache[num] = num ** 3;
+    return cache[num];
+}
+undefined
+cache(3);
+VM143:1 Uncaught TypeError: cache is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM143:1
+cube(3);
+
+27
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+cache;
+{3: 27}
+cube(3);
+27
+cube(5);
+125
+cache;
+{3: 27, 5: 125}
+cube(5);
+125
