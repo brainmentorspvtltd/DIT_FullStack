@@ -1,0 +1,109 @@
+// function constrcutor
+function Person(id, name, city){
+    this.id = id:
+}
+VM86:3 Uncaught SyntaxError: Unexpected token ':'
+// function constrcutor
+function Person(id, name, city){
+    this.id = id;
+    this.name = name;
+    this.city = city;
+}
+Person.prototype.printPersonDetails = function(){
+    console.log(`Id ${this.id} Name ${this.name} City ${this.city}`);
+}
+// function constructor
+function Employee(salary, bonus, dept){
+    this.salary = salary;
+    this.bonus = bonus;
+    this.dept = dept;
+}
+Employee.prototype.printEmployeeDetails = function(){
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+// var amit = new Person(1001, 'Amit', 'Delhi')
+ƒ (){
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+typeof Person;
+'function'
+Person.prototype;
+{printPersonDetails: ƒ, constructor: ƒ}
+typeof Person.prototype;
+'object'
+typeof Employee;
+'function'
+typeof Employee.prototype;
+'object'
+Employee.prototype.__proto__ == Object.prototype;
+true
+Employee.prototype.__proto__ == Person.prototype.__proto__;
+true
+Employee.prototype.__proto__ = Person.prototype
+{printPersonDetails: ƒ, constructor: ƒ}printPersonDetails: ƒ ()constructor: ƒ Person(id, name, city)[[Prototype]]: Object
+Employee.prototype.__proto__ == Object.prototype;
+false
+Employee.prototype.__proto__ == Person.prototype;
+true
+function Employee(id, name, city, salary, bonus, dept){
+    // id ,name, city (Give it to the Person)
+    console.log(' this is ', this);
+    //var p = new Person()
+    Person.call(this, id, name, city); // bind this (Employee) with Person
+    this.salary = salary;
+    this.bonus = bonus;
+    this.dept = dept;
+}
+Employee.prototype.printEmployeeDetails = function(){
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+ƒ (){
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+Employee.prototype.__proto__ == Person.prototype;
+false
+Employee.prototype.__proto__ = Person.prototype;
+{printPersonDetails: ƒ, constructor: ƒ}
+var amit =new Employee(1001, 'amit','delhi',222222,2222,'IT');
+VM1319:3  this is  Employee {}
+undefined
+amit;
+Employee {id: 1001, name: 'amit', city: 'delhi', salary: 222222, bonus: 2222, …}
+amit.printEmployeeDetails();
+VM1319:11 Salary 222222 Bonus 2222 Dept IT
+undefined
+amit.printPersonDetails();
+VM642:8 Id 1001 Name amit City delhi
+undefined
+amit;
+Employee {id: 1001, name: 'amit', city: 'delhi', salary: 222222, bonus: 2222, …}bonus: 2222city: "delhi"dept: "IT"id: 1001name: "amit"salary: 222222[[Prototype]]: PersonprintEmployeeDetails: ƒ ()constructor: ƒ Employee(id, name, city, salary, bonus, dept)[[Prototype]]: ObjectprintPersonDetails: ƒ ()constructor: ƒ Person(id, name, city)[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: PersonprintEmployeeDetails: ƒ ()constructor: ƒ Employee(id, name, city, salary, bonus, dept)[[Prototype]]: Objectget __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+amit;
+Employee {id: 1001, name: 'amit', city: 'delhi', salary: 222222, bonus: 2222, …}
+amit.__proto__;
+Person {printEmployeeDetails: ƒ, constructor: ƒ}
+amit.__proto__ == Employee.prototype;
+true
+amit.__proto__.__proto__ == Person.prototype;
+true
+amit.__proto__.__proto__.__proto__ == Object.prototype;
+true
+amit.__proto__.__proto__.__proto__.__proto__ == null;
+true
+amit.printEmployeeDetails();
+VM1319:11 Salary 222222 Bonus 2222 Dept IT
+undefined
+amit.printPersonDetails();
+VM642:8 Id 1001 Name amit City delhi
+undefined
+Employee.prototype.printEmployeeDetails = function(){
+    this.printPersonDetails();
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+ƒ (){
+    this.printPersonDetails();
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+amit.printEmployeeDetails();
+VM642:8 Id 1001 Name amit City delhi
+VM1898:3 Salary 222222 Bonus 2222 Dept IT
+undefined
